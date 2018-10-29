@@ -6,7 +6,7 @@
 
     <groupId>net.dmitry.jooq.postgis.spatial</groupId>
     <artifactId>jooq-postgis-spatial</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
