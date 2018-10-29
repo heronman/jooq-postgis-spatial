@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+repositories {
+  maven { url "https://repo.maven.apache.org/maven2" }
+}
+dependencies {
+  compile ("org.jetbrains.kotlin:kotlin-stdlib:1.2.51")
+  compile ("org.jooq:jooq:${jooqVersion}")
+  compile ("org.postgresql:postgresql:${postgresqlVersion}")
+  compile ("net.postgis:postgis-jdbc:${postgisVersion}") {
+    exclude(module: 'postgresql')
+  }
+  compile("com.vividsolutions:jts:${vividsolutionsJTSVersion}") {
+    exclude(module: 'xml-apis')
+  }
+  testCompile("junit:junit:4.11")
+}
